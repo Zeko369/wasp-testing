@@ -1,6 +1,11 @@
 {
   "scripts": {
     "dev": "wasp start",
+    "db:migrate": "wasp db migrate-dev",
+    "db:studio": "wasp db studio",
     "build": "wasp build"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.5.0"
   }
 }
