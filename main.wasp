@@ -47,6 +47,8 @@ entity Task {=psl
   isDone      Boolean @default(false)
   user        User    @relation(fields: [userId], references: [id])
   userId      Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 psl=}
 
 query getTasks {

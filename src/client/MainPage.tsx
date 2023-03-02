@@ -60,6 +60,8 @@ const MainPage = () => {
   if (isLoading) return <div>Loading...</div>;
   if (error || !tasks) return <div>Error: {(error as any)?.message || String(error)}</div>;
 
+  console.log(tasks);
+
   return (
     <div>
       <button onClick={logout}> Logout </button>

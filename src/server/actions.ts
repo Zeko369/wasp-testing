@@ -24,7 +24,7 @@ export const updateTask = async (args: unknown, context: Context) => {
   }
 
   const data = updateTaskSchema.parse(args) as any;
-  return context.entities.Task.update({
+  return context.entities.Task.updateMany({
     where: { id: data.id, user: { id: context.user.id } },
     data: { isDone: data.isDone },
   });
